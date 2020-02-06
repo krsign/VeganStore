@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    background-image: url(https://edyoda.s3.ap-south-1.amazonaws.com/public/landing-background.png);
+    background-size: cover;
+    
+}
+#top-bar{
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 4px #ccc;
+    padding: 0px 28px;
+    height: 77px;
+    box-sizing: border-box;
+    
+    /* position: fixed; */
+}
+#logo{
+    width: 40px;
+    margin-top: 20px;
+
+}
+.menu-items{
+    margin-right: 16px;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif; 
+    text-align: center;
+    
+}
+.menu-items > i{
+    padding: 4px;
+}
+#demo-pages-dropdown{
+    width: 200px;
+    background-color: white;
+    box-shadow: 2px 2px 4px #ccc;
+    border-top: 2px solid rgb(170,210,44);
+    padding: 8px;
+    display: none;
+    
+}
+#demo-pages-menu:hover #demo-pages-dropdown{
+    display: block;
+} 
+#demo-pages-dropdown > ul{
+    list-style-type: none;
+    font-size: 20px ;
+}
+#demo-pages-menu{
+    position: relative;
+    margin-left: 36px;
+
+}
+#demo-pages-dropdown{
+    position: absolute;
+    right: 0px;
+
+}
+.primary-button{
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(170, 210, 54);
+    padding: 9px 34px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    
+    cursor: pointer;
+}
+#landing-text-display{
+    text-align: center;
+    margin-top: 250px;
+}
