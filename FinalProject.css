@@ -1,16 +1,35 @@
-body{
-    margin: 0;
-    font-family: 'Poppins', sans-serif; 
-    
-}
+body {     
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        }
+
+
 header{
     background-image: url(https://edyoda.s3.ap-south-1.amazonaws.com/public/landing-background.png);
     background-size: cover;
     width: 100%;
     height: 100vh;
+    background-position: left;
+    box-sizing: border-box;
+    }
+ p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 
-}
-#top-bar{
+ }
+ h3{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+ }
+   
+#topbar {
     background-color: white;
     width: 100%;
     box-shadow: 0 2px 4px #ccc;
@@ -21,49 +40,19 @@ header{
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    
-}
+   }
 #logo{
     width: 40px;
     position: relative;
 
-}
+    }
+
 .menu-items{
     margin-right: 16px;
     font-weight: 600;
     font-size: 14px;
     font-family: 'Poppins', sans-serif; 
-    /* text-align: center; */    
-}
-
-#main-text-wrapper{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-}
-#main-text-wrapper p{
-    width: 100%;
-    max-width: 1100px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #8b8b99;
-    text-align: center;
-    padding-top: 32px;
-}
-#main-text-wrapper h1{
-    width: 100%;
-    max-width: 1100px;
-    font-size: 44px;
-    font-weight: 600;
-    color: #8b8b99;
-    text-align: center;
-    padding-top: 32px;
-    letter-spacing: 8.8px;
-    text-align: center;
-    margin: 0;
+    text-align: center;    
 }
 .menu-items > i{
     padding: 4px;
@@ -76,7 +65,7 @@ header{
     padding: 8px;
     display: none;
     
-}
+} 
 #demo-pages-menu:hover #demo-pages-dropdown{
     display: block;
 } 
@@ -94,7 +83,7 @@ header{
     right: 0px;
 
 }
-.primary-button{
+#primary-button{
     font-size: 12px;
     font-weight: 600;
     color: white;
@@ -102,24 +91,75 @@ header{
     padding: 9px 34px;
     text-transform: uppercase;
     border: 0;
-    border-radius: 4px;
-    
+    border-radius: 5px;
     cursor: pointer;
 }
+#menu-icon {
+    margin: 50px;
+    font-size: 48px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    
+}
+
+#menu-icon:hover {
+	transform: scale(1.3);
+}
+
+
+
+/* All sections Properties should below this  */
+/* Section 1 ------------------------------------------------------------------------------------ */
 section{
     display: block;
-}
+    display: flex;
+    }
 #landing-section{
     width: 100%;
     height: 100vh;
-}
+    }
+
 #main-text-wrapper{
-    padding-top: 90px;
-    text-align: center;
-   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
 }
 
-/* Steps Sections */
+#main-text-wrapper h1{
+    width: 100%;
+    max-width: 1100px;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 8.8px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+}
+#main-text-wrapper p{
+   width: 100%;
+   max-width: 1100px;
+   font-size: 14px;
+   letter-spacing: 0.5px;
+   font-weight: 400;
+   color: #8b8b99;
+   text-align: center;
+
+   padding: 16px;
+   box-sizing: border-box;
+
+}
+
+
+
+/* Section Part 2 --------------------------------------------------------------------------------------*/
+#steps-section {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+   }
 #step-section{
     width: 100%;
     display: flex;
@@ -144,30 +184,116 @@ section{
 .step-item:hover i{
     transform: scale(1.1,1.1);
 }
-.step-item h3{
-    font-weight: 600;
-    font-size: 24px;
-}
-.step-items p{
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    line-height: 1.6;
-    margin-top: 0;
-}
-#first-step{
+   
+#steps-section > div {
+       width: 25%;
+       height: 80vh;
+   }
+
+#first-step {
+       background-color: #5acda6;
+   }
+   
+#second-step {
+       background-color: #91ac41;
+   }
+   
+#third-step {
+       background-color: #e4b476;
+   }
+   
+#forth-step {
+       background-color: #f69dad;
+   }
+
+
+@media (max-width: 768px){
+        #steps-section > div {
+            width: 100%;
+        }
+    }
+@media (max-width:400px){
+    .menu-item{
+        display: none;
+        }
+        #steps-section > div {
+            width: 100%;
+        }
+    }
+  
     
-    background-color: #5acda6;
+
+
+ /* Section 3----------------------------------------------------------------------------------------------------- */
+#store-section{
+    display: block;
+    width: 100%;
+    background-color: #f7eee2;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+}
+#fresh-food-heading {
+    color: #91ac41;
+    font-size: 24px;
+    font-family: 'Caveat', cursive;
+    margin: 0;
+    margin-top: 35px;
+}
+#store-section > h3{
+    font-size: 44px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 8px;
+
+}
+#store-disc{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin-bottom: 55px;
+}
+#store-items-wrapper{
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    justify-content: stretch;
+    margin: 0 auto;
+}
+.store-item{
+    width: 25%;
+    text-align: center;
+    padding: 24px;
 }
 
-#second-step{
-    background-color: #91ac41;
+.icon-wrapper{
+    display: inline-block;
+    background-color: #e3b375;
+    border-radius: 50%;
+    padding: 40px;
+    color: white;
+    transition: all 0.3s;
+}
+.store-item:hover .icon-wrapper{
+    transform: scale(1.1,1.1);
+}
+.icon-wrapper i{
+    font-size: 60px;
+}
+.store-item h3{
+    font-size: 24px;
+    font-weight: 600;
 
 }
-#third-step{
-    color: white;
-    background-color: #e4b476;
+.store-item p{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: #8b8b99;
 }
-#forth-step{
-    color: white;
-    background-color: #f69dad;
-}
+
+
+
+/* Section 4 ---------------------------------------------------------------------------------------------------*/
